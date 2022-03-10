@@ -69,7 +69,6 @@ def get_same_or_newer(start_date, reader):
 
 def preprocess_data(data):
     import operator
-    data = get_file_lines(FILE_URL)
     reader = csv.reader(data[1:])
     sortedlist = sorted(reader, key=operator.itemgetter(3), reverse=False)
     return sortedlist
